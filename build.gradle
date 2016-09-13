@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.0-rc1'
+    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    // NOTE: Do not place your application dependencies here; they belong
+    // in the individual module build.gradle files
+  }
+}
+
+allprojects {
+  repositories {
+    jcenter()
+    maven {
+      url 'http://192.168.4.53:32770/content/repositories/jcenter/'
+    }
+    // 私有 release 地址
+    maven{
+      url "http://192.168.4.53:32770/content/repositories/releases/"
+    }
+    // 私有 snapshot 地址
+    maven{
+      url "http://192.168.4.53:32770/content/repositories/snapshots/"
+    }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}

@@ -1,0 +1,709 @@
+{
+  "status": 1,
+  "message": "ok",
+  "data": {
+    "list": [
+      {
+        "id": "2021",
+        "name": "永隆汽修",
+        "phone": "010-62259859",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "西直门高粱桥楼北下关交通大学路东2号",
+        "longitude": "116.35479641058",
+        "latitude": "39.955550327626",
+        "distance": 1417,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/4656020150226161550.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "6963",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 27,
+            "cashPrice": 35
+          },
+          {
+            "id": "6964",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 40
+          }
+        ]
+      },
+      {
+        "id": "3243",
+        "name": "昆仑源汽车美容中心",
+        "phone": "13718078926",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "葱店胡同2号院西院",
+        "longitude": "116.36286340407",
+        "latitude": "39.94359560348",
+        "distance": 1903,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/1469618555567.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "11648",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 35
+          },
+          {
+            "id": "11649",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 35,
+            "cashPrice": 50
+          }
+        ]
+      },
+      {
+        "id": "9736",
+        "name": "易车生活中铝大厦店",
+        "phone": "010-82290788",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "西直门北大街62号中国铝业大厦B1层",
+        "longitude": "116.36419998521",
+        "latitude": "39.950946995329",
+        "distance": 1976,
+        "bizHourBegin": "08:30",
+        "bizHourEnd": "18:30",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1468470908808.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "45684",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          },
+          {
+            "id": "45686",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          }
+        ]
+      },
+      {
+        "id": "3256",
+        "name": "德国马牌百万佳业店",
+        "phone": "010-68348350",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "百万大街17号院德国马牌",
+        "longitude": "116.35593486323",
+        "latitude": "39.93416846324",
+        "distance": 1977,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/6824620150226144556.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "11686",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 26,
+            "cashPrice": 30
+          },
+          {
+            "id": "11687",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 35,
+            "cashPrice": 50
+          }
+        ]
+      },
+      {
+        "id": "10448",
+        "name": "旺鑫龙翔汽车服务",
+        "phone": "010-62268439",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "四道口路2号",
+        "longitude": "116.35194264892",
+        "latitude": "39.965064253979",
+        "distance": 2097,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "18:00",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1472089531927.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "48537",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 24,
+            "cashPrice": 30
+          },
+          {
+            "id": "48538",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 40
+          }
+        ]
+      },
+      {
+        "id": "4228",
+        "name": "美车堂枫蓝国际店",
+        "phone": "010-62218900",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "西直门北大街32号院枫蓝国际中心1号楼B2",
+        "longitude": "116.36314155819",
+        "latitude": "39.958592901215",
+        "distance": 2193,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/89400820150226165242.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "13886",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 35,
+            "cashPrice": 50
+          },
+          {
+            "id": "13887",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 48,
+            "cashPrice": 68
+          }
+        ]
+      },
+      {
+        "id": "1337",
+        "name": "福翔顺发汽车服务",
+        "phone": "010-66182791",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "赵登禹路114号",
+        "longitude": "116.37450454201",
+        "latitude": "39.936449219487",
+        "distance": 3127,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "2",
+        "img": "http://kuanter.com/resources/shopPicture/1468915299862.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "3527",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 40
+          },
+          {
+            "id": "3528",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 45
+          }
+        ]
+      },
+      {
+        "id": "9735",
+        "name": "易车生活金融街洲际店",
+        "phone": "010-66553886",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "金融街11号洲际酒店B3层 ",
+        "longitude": "116.36443105806",
+        "latitude": "39.924965514571",
+        "distance": 3240,
+        "bizHourBegin": "08:30",
+        "bizHourEnd": "18:30",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1468470624869.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "45692",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          },
+          {
+            "id": "45694",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          }
+        ]
+      },
+      {
+        "id": "9716",
+        "name": "易车生活西海国际中心",
+        "phone": "010-62582050",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "北三环西路99号西海国际中心B2层",
+        "longitude": "116.31560619543",
+        "latitude": "39.969873594059",
+        "distance": 3246,
+        "bizHourBegin": "08:30",
+        "bizHourEnd": "18:30",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1468467087455.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "45584",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          },
+          {
+            "id": "45589",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          }
+        ]
+      },
+      {
+        "id": "7215",
+        "name": "华夏威洁士大钟寺店",
+        "phone": "18310035035",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "大钟寺东路2号",
+        "longitude": "116.34447434064",
+        "latitude": "39.97774505186",
+        "distance": 3314,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "18:30",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1457516051372.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "32483",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 33,
+            "cashPrice": 50
+          },
+          {
+            "id": "32484",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 38,
+            "cashPrice": 50
+          }
+        ]
+      },
+      {
+        "id": "3178",
+        "name": "融达汽车服务",
+        "phone": "13261840951",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "复兴路乙11号梅地亚中心",
+        "longitude": "116.32623284904",
+        "latitude": "39.916821994682",
+        "distance": 3713,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/74127920150226154805.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "11440",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 30
+          },
+          {
+            "id": "11441",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 35
+          }
+        ]
+      },
+      {
+        "id": "1343",
+        "name": "3M陆桥翠宫店",
+        "phone": "010-82111911",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "知春路76号1栋1-1（翠宫饭店西侧）",
+        "longitude": "116.33924722057",
+        "latitude": "39.981794577134",
+        "distance": 3755,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/4033920150226154150.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "3539",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 40
+          },
+          {
+            "id": "3540",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 35,
+            "cashPrice": 50
+          }
+        ]
+      },
+      {
+        "id": "1913",
+        "name": "新思路汽车维修服务",
+        "phone": "18600179788",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "德内大街乙219号",
+        "longitude": "116.38571907497",
+        "latitude": "39.945049441713",
+        "distance": 3820,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "2",
+        "img": "http://kuanter.com/resources/shopPicture/1469618527122.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "6556",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 20,
+            "cashPrice": 30
+          },
+          {
+            "id": "6557",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 35
+          }
+        ]
+      },
+      {
+        "id": "1294",
+        "name": "知春洗车",
+        "phone": "13621007685",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "知春路118号院内平房",
+        "longitude": "116.3263171612",
+        "latitude": "39.981145241383",
+        "distance": 3881,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/1469148719268.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "3452",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 24,
+            "cashPrice": 30
+          },
+          {
+            "id": "3453",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 28,
+            "cashPrice": 35
+          }
+        ]
+      },
+      {
+        "id": "1333",
+        "name": "路之缘汽修",
+        "phone": "010-88431968",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "远大路金源燕莎东北侧",
+        "longitude": "116.29835989382",
+        "latitude": "39.966320720341",
+        "distance": 4157,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/8670920150226155305.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "3521",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 35
+          },
+          {
+            "id": "3522",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 40
+          }
+        ]
+      },
+      {
+        "id": "1655",
+        "name": "龙泉天洗汽车养护",
+        "phone": "010-58395007",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "丰融园15号楼B2",
+        "longitude": "116.37189883281",
+        "latitude": "39.918825348794",
+        "distance": 4183,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/81938220150226145844.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "5547",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 28,
+            "cashPrice": 50
+          },
+          {
+            "id": "5548",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          }
+        ]
+      },
+      {
+        "id": "9732",
+        "name": "易车生活城建大厦店",
+        "phone": "010-82274404",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "北太平庄路18号城建大厦B2层",
+        "longitude": "116.37750888925",
+        "latitude": "39.974594218154",
+        "distance": 4248,
+        "bizHourBegin": "08:30",
+        "bizHourEnd": "18:30",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/1468470376456.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "45681",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          },
+          {
+            "id": "45682",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 60
+          }
+        ]
+      },
+      {
+        "id": "1341",
+        "name": "安鑫美达汽车服务",
+        "phone": "010-88153594",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "玲珑路恩济西里8号楼北侧低商",
+        "longitude": "116.2916038425",
+        "latitude": "39.938049347979",
+        "distance": 4399,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/6532120150226155848.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "3536",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 20,
+            "cashPrice": 25
+          },
+          {
+            "id": "3537",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 25,
+            "cashPrice": 30
+          }
+        ]
+      },
+      {
+        "id": "4679",
+        "name": "爱义行中关村店",
+        "phone": "010-82606533",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110104",
+        "district": "海淀区",
+        "address": "丹棱街16号海兴大厦B座B1层",
+        "longitude": "116.31666946756",
+        "latitude": "39.984359534816",
+        "distance": 4521,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "4",
+        "img": "http://kuanter.com/resources/shopPicture/11727920150410190209.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "16409",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 70
+          },
+          {
+            "id": "16410",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 90
+          }
+        ]
+      },
+      {
+        "id": "3012",
+        "name": "平安德泰电脑汽车",
+        "phone": "010-66112023",
+        "cityCode": "1101",
+        "city": "北京",
+        "districtCode": "110102",
+        "district": "西城区",
+        "address": "地安门西大街丙28号东侧",
+        "longitude": "116.392784672",
+        "latitude": "39.939382835857",
+        "distance": 4525,
+        "bizHourBegin": "08:00",
+        "bizHourEnd": "19:00",
+        "score": "3",
+        "img": "http://kuanter.com/resources/shopPicture/51181620150226145149.jpg",
+        "shopCode": "",
+        "flag": "",
+        "serviceItems": [
+          {
+            "id": "10919",
+            "catId": "330",
+            "name": "小型车清洗",
+            "ktPrice": 30,
+            "cashPrice": 35
+          },
+          {
+            "id": "10920",
+            "catId": "330",
+            "name": "大型车清洗",
+            "ktPrice": 35,
+            "cashPrice": 40
+          }
+        ]
+      }
+    ],
+    "count": 225
+  }
+}
