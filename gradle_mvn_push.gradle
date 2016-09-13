@@ -8,8 +8,14 @@ def SNAPSHOT_REPOSITORY_URL = "http://192.168.4.53:32770/content/repositories/sn
 def REPOSITORY_URL = VERSION_NAME.endsWith("-SNAPSHOT") ? SNAPSHOT_REPOSITORY_URL :
     RELEASE_REPOSITORY_URL;
 
+def getMavenProperty(key) {
+  Properties properties = new Properties()
+  properties.load(new FileInputStream(new File("${project.rootDir}/your_login_maven.properties")))
+  return properties.getProperty(key)
+}
+
 logger.info("groupId = %s\t\nartifactId = %s\t\nversion = %s\t\nrepository = %s\t\n", GROUP,
-    POM_ARTIFACT_ID, VERSION_NAME, REPOSITORY_URL)
+    POM_ARTIFACT_ID, getMavenProperty("NEXUS_USERNAME"), getMavenProperty("NEXUS_PASSWORD"))
 
 afterEvaluate { project ->
   uploadArchives {
@@ -18,7 +24,8 @@ afterEvaluate { project ->
       pom.artifactId = POM_ARTIFACT_ID
       pom.version = VERSION_NAME
       repository(url: REPOSITORY_URL) {
-        authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+        authentication(userName: getMavenProperty("NEXUS_USERNAME"),
+            password: getMavenProperty("NEXUS_PASSWORD"))
       }
     }
   }
