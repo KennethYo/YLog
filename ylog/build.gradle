@@ -26,8 +26,16 @@ dependencies {
   compile SUPPORT_APPCOMPAT_V7
 }
 
-ext.GROUP="com.yiche.library"
-ext.VERSION_NAME="1.1-SNAPSHOT"
-ext.POM_ARTIFACT_ID="ylog"
+ext.NAME = "YLog"
+ext.URL = "https://github.com/KennethYo/YLog"
 
-apply from: "${project.rootDir}/gradle_mvn_push.gradle"
+ext.DESCRIPTION = "an android log library"
+ext.GROUP = "com.yiche.library"
+ext.POM_ARTIFACT_ID = "ylog"
+ext.VERSION_NAME = "1.1"
+
+ext.SCM_URL = "https://github.com/KennethYo/YLog"
+ext.SCM_CONNECTION="https://github.com/KennethYo/YLog.git"
+
+//apply from: "${project.rootDir}/gradle_mvn_push.gradle"
+apply from: "${project.rootDir}/gradle_bintray_push.gradle"

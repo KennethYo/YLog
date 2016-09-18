@@ -10,7 +10,7 @@ def REPOSITORY_URL = VERSION_NAME.endsWith("-SNAPSHOT") ? SNAPSHOT_REPOSITORY_UR
 
 def getMavenProperty(key) {
   Properties properties = new Properties()
-  properties.load(new FileInputStream(new File("${project.rootDir}/your_login_maven.properties")))
+  properties.load(new FileInputStream(new File("${project.rootDir}/your_login_local.properties")))
   return properties.getProperty(key)
 }
 

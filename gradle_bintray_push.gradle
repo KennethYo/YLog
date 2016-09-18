@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+install {
+  repositories.mavenInstaller {
+    pom {
+      project {
+        name NAME
+        url URL
+        description DESCRIPTION
+
+        packaging 'aar'
+        groupId GROUP
+        artifactId POM_ARTIFACT_ID
+        version VERSION_NAME
+
+        licenses {
+          license {
+            name 'The Apache Software License, Version 2.0'
+            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+            distribution 'repo'
+          }
+        }
+
+        scm {
+          url SCM_URL
+          connection SCM_CONNECTION
+        }
+
+        developers {
+          developer {
+            name 'KennethYo'
+          }
+        }
+      }
+    }
+  }
+}
+//task sourcesJar(type: Jar) {
+//  classifier = 'sources'
+//}
+//
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//  classifier = 'javadoc'
+//  from javadoc.destinationDir
+//}
+//
+//artifacts {
+//  archives javadocJar
+//  archives sourcesJar
+//}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('your_login_local.properties').newDataInputStream())
+
+bintray {
+  user = properties.getProperty("BINTRAY_USER")
+  key = properties.getProperty("BINTRAY_APIKEY")
+
+  configurations = ['archives']
+  pkg {
+    repo = NAME
+    name = NAME
+    websiteUrl = SCM_URL
+    vcsUrl = SCM_CONNECTION
+    licenses = ["Apache-2.0"]
+    issueTrackerUrl = SCM_URL+"/issues"
+    publish = true
+    publicDownloadNumbers = true
+    version {
+      desc = DESCRIPTION
+      gpg {
+        sign = true
+        passphrase = properties.getProperty("BINTRAY_GPG_PASSWORD")
+      }
+    }
+  }
+}
