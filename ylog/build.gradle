@@ -28,13 +28,16 @@ dependencies {
 
 ext.NAME = "YLog"
 ext.URL = "https://github.com/KennethYo/YLog"
-
 ext.DESCRIPTION = "an android log library"
+
 ext.GROUP = "com.yiche.library"
-ext.POM_ARTIFACT_ID = "ylog"
+ext.ARTIFACT_ID = "ylog"
+
 ext.VERSION_NAME = "1.1"
+ext.VERSION_DESCRIPTION = "first publish"
 
 ext.SCM_URL = "https://github.com/KennethYo/YLog"
+ext.SCM_ISSUE_URL = "https://github.com/KennethYo/YLog/issues"
 ext.SCM_CONNECTION="https://github.com/KennethYo/YLog.git"
 
 //apply from: "${project.rootDir}/gradle_mvn_push.gradle"
