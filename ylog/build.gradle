@@ -30,7 +30,7 @@ ext.NAME = "YLog"
 ext.URL = "https://github.com/KennethYo/YLog"
 ext.DESCRIPTION = "an android log library"
 
-ext.GROUP = "com.yiche.library"
+ext.GROUP = "me.kennethyo.library"
 ext.ARTIFACT_ID = "ylog"
 
 ext.VERSION_NAME = "1.2"

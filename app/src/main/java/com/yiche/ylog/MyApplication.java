@@ -16,15 +16,16 @@ public class MyApplication extends Application {
 
   @Override public void onCreate() {
     super.onCreate();
-    YLog.init("YLogDemo")
-        .debug(true)
-        .showThread(true)
-        .showClass(true)
-        .setShowClassCount(2)
-        .showBorder(true)
-        .showPriority(Printer.ERROR)
+    //初始化
+    YLog.init("YLogDemo")//默认 tag
+        .debug(true)//设置 debug
+        .showThread(true)//显示线程
+        .showClass(true)//显示调用栈
+        .setShowClassCount(2)//显示调用栈行数
+        .showBorder(true)//是否显示边界
+        .showPriority(Printer.ERROR)//显示 log 级别
         .setErrorListener(new ErrorListener() {
-          @Override public void onError(Throwable t) {
+          @Override public void onError(Throwable t) {//throwable 回调
             new Handler(Looper.getMainLooper()).post(new Runnable() {
               @Override public void run() {
                 Toast.makeText(MyApplication.this, "Oops, error", Toast.LENGTH_SHORT).show();

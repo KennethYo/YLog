@@ -11,6 +11,12 @@ public class YLog {
   private YLog() {
   }
 
+  /**
+   * init
+   *
+   * @param tag default tag
+   * @return Setting
+   */
   public static Setting init(String tag) {
 
     printer = new LogPrinter();

@@ -169,7 +169,7 @@ class LogPrinter implements Printer {
       return;
     }
 
-    if (setting.getErrorListener() != null) {
+    if (setting.getErrorListener() != null && t != null) {
       setting.getErrorListener().onError(t);
     }
 
