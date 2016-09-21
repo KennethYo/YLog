@@ -1,6 +1,9 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
+group = GROUP
+version = VERSION_NAME
+
 install {
   repositories.mavenInstaller {
     pom {
@@ -62,8 +65,6 @@ artifacts {
 Properties properties = new Properties()
 properties.load(project.rootProject.file('your_login_local.properties').newDataInputStream())
 
-group = GROUP
-version = VERSION_NAME
 
 bintray {
   user = properties.getProperty("BINTRAY_USER")

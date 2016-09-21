@@ -125,7 +125,7 @@ class LogPrinter implements Printer {
         d(message);
         return;
       }
-      e("json string not a real json");
+      e("json string is not a real json");
     } catch (JSONException e) {
       e(e);
     }
