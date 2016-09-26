@@ -13,6 +13,7 @@ public class Setting {
   private int showClassCount = 1;
   private boolean showBorder;
   @Printer.Priority private int showPriority = Printer.VERBOSE;
+  private Class warpperClass;
   private ErrorListener errorListener;
 
   public String getTag() {
@@ -77,6 +78,15 @@ public class Setting {
       return this;
     }
     this.showClassCount = showClassCount;
+    return this;
+  }
+
+  public Class getWarpperClass() {
+    return warpperClass;
+  }
+
+  public Setting setWarpperClass(Class warpperClass) {
+    this.warpperClass = warpperClass;
     return this;
   }
 

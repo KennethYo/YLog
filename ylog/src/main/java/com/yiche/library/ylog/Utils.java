@@ -43,12 +43,14 @@ class Utils {
     return String.format(msg, args);
   }
 
-  static StackTraceElement[] getTargetStack(StackTraceElement[] elements, int offset) {
+  static StackTraceElement[] getTargetStack(StackTraceElement[] elements, int offset,
+      Class... warppers) {
     int targetIndex = 0, length = elements.length;
     for (int i = 0; i < length; i++) {
-      if (elements[i].getClassName().equals(YLog.class.getName()) || elements[i].getClassName()
-          .equals(LogPrinter.class.getName())) {
-        targetIndex = i;
+      for (Class w : warppers) {
+        String name = w.getName();
+        if (elements[i].getClassName().equals(name))
+          targetIndex = i;
       }
     }
 

@@ -88,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
+  @OnClick(R.id.show_warpper) public void showWarpper() {
+    new WarpperLog().log();
+  }
+
   private String inputStream2String(String fileName) throws IOException {
     InputStream inputStream = getAssets().open(fileName);
     String s;
@@ -105,5 +109,12 @@ public class MainActivity extends AppCompatActivity {
       }
     }
     return s;
+  }
+
+  public static class WarpperLog {
+
+    public void log() {
+      YLog.d("Warpper YLog");
+    }
   }
 }

@@ -18,7 +18,6 @@ public class YLog {
    * @return Setting
    */
   public static Setting init(String tag) {
-
     printer = new LogPrinter();
     return printer.init(tag);
   }

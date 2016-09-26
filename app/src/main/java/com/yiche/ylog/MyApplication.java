@@ -24,14 +24,15 @@ public class MyApplication extends Application {
         .setShowClassCount(2)//显示调用栈行数
         .showBorder(true)//是否显示边界
         .showPriority(Printer.ERROR)//显示 log 级别
+        .setWarpperClass(MainActivity.WarpperLog.class)//包裹类
         .setErrorListener(new ErrorListener() {
-          @Override public void onError(Throwable t) {//throwable 回调
-            new Handler(Looper.getMainLooper()).post(new Runnable() {
-              @Override public void run() {
-                Toast.makeText(MyApplication.this, "Oops, error", Toast.LENGTH_SHORT).show();
-              }
-            });
+      @Override public void onError(Throwable t) {//throwable 回调
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+          @Override public void run() {
+            Toast.makeText(MyApplication.this, "Oops, error", Toast.LENGTH_SHORT).show();
           }
         });
+      }
+    });
   }
 }

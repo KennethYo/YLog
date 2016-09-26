@@ -206,7 +206,16 @@ class LogPrinter implements Printer {
 
     StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
 
-    StackTraceElement[] stacks = getTargetStack(stackTrace, setting.getShowClassCount());
+    StackTraceElement[] stacks;
+
+    if (setting.getWarpperClass() != null) {
+      stacks = getTargetStack(stackTrace, setting.getShowClassCount(), YLog.class, LogPrinter.class,
+          setting.getWarpperClass());
+    } else {
+      stacks =
+          getTargetStack(stackTrace, setting.getShowClassCount(), YLog.class, LogPrinter.class);
+    }
+
     for (int i = 0, size = stacks.length; i < size; i++) {
       StackTraceElement stack = stacks[i];
       if (stack == null) continue;
