@@ -60,15 +60,6 @@ public class Setting {
     return this;
   }
 
-  public boolean isShowBorder() {
-    return showBorder;
-  }
-
-  public Setting showBorder(boolean showBorder) {
-    this.showBorder = showBorder;
-    return this;
-  }
-
   public int getShowClassCount() {
     return showClassCount;
   }
