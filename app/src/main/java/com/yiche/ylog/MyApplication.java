@@ -20,7 +20,7 @@ public class MyApplication extends Application {
     YLog.init("YLogDemo")//默认 tag
         .debug(true)//设置 debug
         .showThread(true)//显示线程
-        .showClass(true)//显示调用栈
+        .showStackTrace(true)//显示调用栈
         .setShowClassCount(2)//显示调用栈行数
         .showPriority(Printer.ERROR)//显示 log 级别
         .setWarpperClass(MainActivity.WarpperLog.class)//包裹类

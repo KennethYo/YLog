@@ -9,7 +9,7 @@ public class Setting {
   private String tag = TAG;
   private boolean debug;
   private boolean showThread;
-  private boolean showClass;
+  private boolean showStackTrace;
   private int showClassCount = 1;
   private boolean showBorder;
   @Printer.Priority private int showPriority = Printer.VERBOSE;
@@ -37,17 +37,17 @@ public class Setting {
     return showThread;
   }
 
-  public Setting showThread(boolean showThread) {
-    this.showThread = showThread;
+  public Setting showThread(boolean show) {
+    this.showThread = show;
     return this;
   }
 
-  public boolean isShowClass() {
-    return showClass;
+  public boolean isShowStackTrace() {
+    return showStackTrace;
   }
 
-  public Setting showClass(boolean showClass) {
-    this.showClass = showClass;
+  public Setting showStackTrace(boolean show) {
+    this.showStackTrace = show;
     return this;
   }
 

@@ -175,7 +175,7 @@ class LogPrinter implements Printer {
 
     androidLog(tag, priority, TOP_BORDER);
     logThread(tag, priority);
-    logClass(tag, priority);
+    logStackTrace(tag, priority);
     logContent(tag, priority, t, msg);
     androidLog(tag, priority, BOTTOM_BORDER);
   }
@@ -199,8 +199,8 @@ class LogPrinter implements Printer {
     }
   }
 
-  private void logClass(String tag, @Priority int priority) {
-    if (!setting.isShowClass()) {
+  private void logStackTrace(String tag, @Priority int priority) {
+    if (!setting.isShowStackTrace()) {
       return;
     }
 
@@ -220,7 +220,7 @@ class LogPrinter implements Printer {
       StackTraceElement stack = stacks[i];
       if (stack == null) continue;
       StringBuilder sb = new StringBuilder();
-      sb.append("Class : ");
+      sb.append("at ");
       sb.append(stack.getClassName());
       sb.append(".");
       sb.append(stack.getMethodName());
