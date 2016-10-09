@@ -33,8 +33,8 @@ ext.DESCRIPTION = "an android log library"
 ext.GROUP = "me.kennethyo.library"
 ext.ARTIFACT_ID = "ylog"
 
-ext.VERSION_NAME = "1.2"
-ext.VERSION_DESCRIPTION = "first publish"
+ext.VERSION_NAME = "1.3"
+ext.VERSION_DESCRIPTION = "show process name"
 
 ext.SCM_URL = "https://github.com/KennethYo/YLog"
 ext.SCM_ISSUE_URL = "https://github.com/KennethYo/YLog/issues"
