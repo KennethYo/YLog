@@ -19,7 +19,8 @@ public class MyApplication extends Application {
     //初始化
     YLog.init("YLogDemo")//默认 tag
         .debug(true)//设置 debug
-        .showThread(true)//显示线程
+        .showProcessName(this)//显示进程名
+        .showThreadName(true)//显示线程
         .showStackTrace(true)//显示调用栈
         .setShowClassCount(2)//显示调用栈行数
         .showPriority(Printer.ERROR)//显示 log 级别

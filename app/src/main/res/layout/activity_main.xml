@@ -19,6 +19,12 @@
       android:paddingTop="@dimen/activity_vertical_margin"
       >
     <Button
+        android:id="@+id/show_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show Process"
+        />
+    <Button
         android:id="@+id/show_tag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

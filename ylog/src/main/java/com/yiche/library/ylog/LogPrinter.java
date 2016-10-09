@@ -174,7 +174,7 @@ class LogPrinter implements Printer {
     }
 
     androidLog(tag, priority, TOP_BORDER);
-    logThread(tag, priority);
+    logProcessAndThread(tag, priority);
     logStackTrace(tag, priority);
     logContent(tag, priority, t, msg);
     androidLog(tag, priority, BOTTOM_BORDER);
@@ -235,15 +235,17 @@ class LogPrinter implements Printer {
     androidLog(tag, priority, MIDDLE_BORDER);
   }
 
-  private void logThread(String tag, @Priority int priority) {
-    if (!setting.isShowThread()) {
-      return;
+  private void logProcessAndThread(String tag, @Priority int priority) {
+    if (!TextUtils.isEmpty(setting.getProcessName())) {
+      androidLog(tag, priority, HORIZONTAL_DOUBLE_LINE + " Process : " + setting.getProcessName());
     }
-
-    androidLog(tag, priority,
-        HORIZONTAL_DOUBLE_LINE + " Thread : " + Thread.currentThread().getName());
-
-    androidLog(tag, priority, MIDDLE_BORDER);
+    if (setting.isShowThreadName()) {
+      androidLog(tag, priority,
+          HORIZONTAL_DOUBLE_LINE + " Thread  : " + Thread.currentThread().getName());
+    }
+    if (!TextUtils.isEmpty(setting.getProcessName()) || setting.isShowThreadName()) {
+      androidLog(tag, priority, MIDDLE_BORDER);
+    }
   }
 
   private String getTag() {

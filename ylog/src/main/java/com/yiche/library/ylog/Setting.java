@@ -1,5 +1,9 @@
 package com.yiche.library.ylog;
 
+import android.app.ActivityManager;
+import android.app.Application;
+import android.os.Process;
+
 /**
  * Created by kenneth on 16/9/7.
  */
@@ -8,10 +12,10 @@ public class Setting {
   public static final String TAG = "YLog";
   private String tag = TAG;
   private boolean debug;
-  private boolean showThread;
+  private boolean showThreadName;
+  private String processName;
   private boolean showStackTrace;
   private int showClassCount = 1;
-  private boolean showBorder;
   @Printer.Priority private int showPriority = Printer.VERBOSE;
   private Class warpperClass;
   private ErrorListener errorListener;
@@ -33,12 +37,28 @@ public class Setting {
     return this;
   }
 
-  public boolean isShowThread() {
-    return showThread;
+  public boolean isShowThreadName() {
+    return showThreadName;
   }
 
-  public Setting showThread(boolean show) {
-    this.showThread = show;
+  public Setting showThreadName(boolean show) {
+    this.showThreadName = show;
+    return this;
+  }
+
+  public String getProcessName() {
+    return processName;
+  }
+
+  public Setting showProcessName(Application app) {
+    int myPid = Process.myPid();
+    ActivityManager am = (ActivityManager) app.getSystemService(Application.ACTIVITY_SERVICE);
+    for (ActivityManager.RunningAppProcessInfo appProcess : am.getRunningAppProcesses()) {
+      if (appProcess.pid == myPid) {
+        processName = appProcess.processName;
+        break;
+      }
+    }
     return this;
   }
 

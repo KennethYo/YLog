@@ -1,5 +1,6 @@
 package com.yiche.ylog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import butterknife.ButterKnife;
@@ -19,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
+  }
+
+  @Override protected void onDestroy() {
+    super.onDestroy();
+    stopService(new Intent(this, ChildService.class));
+  }
+
+  @OnClick(R.id.show_process) public void showProcess() {
+    startService(new Intent(this, ChildService.class));
   }
 
   @OnClick(R.id.show_tag) public void showTag() {
