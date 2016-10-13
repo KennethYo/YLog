@@ -33,25 +33,31 @@ public interface Printer {
 
   void v(Object o);
 
-  void v(String string, Object... args);
-
-  void i(Object o);
-
-  void i(String string, Object... args);
-
-  void w(Object o);
-
-  void w(String string, Object... args);
+  void v(String msg, Object... args);
 
   void d(Object o);
 
-  void d(String string, Object... args);
+  void d(String msg, Object... args);
+
+  void i(Object o);
+
+  void i(String msg, Object... args);
+
+  void w(Object o);
+
+  void w(String msg, Object... args);
+
+  void w(Throwable t);
+
+  void w(Throwable t, Object o);
+
+  void w(Throwable t, String msg, Object... args);
 
   void e(Object o);
 
   void e(Throwable t);
 
-  void e(String string, Object... args);
+  void e(String msg, Object... args);
 
   void e(Throwable t, Object o);
 

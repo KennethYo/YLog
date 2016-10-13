@@ -17,7 +17,7 @@ public class Setting {
   private boolean showStackTrace;
   private int showClassCount = 1;
   @Printer.Priority private int showPriority = Printer.VERBOSE;
-  private Class warpperClass;
+  private Class wrapperClass;
   private ErrorListener errorListener;
 
   public String getTag() {
@@ -92,12 +92,12 @@ public class Setting {
     return this;
   }
 
-  public Class getWarpperClass() {
-    return warpperClass;
+  public Class getWrapperClass() {
+    return wrapperClass;
   }
 
-  public Setting setWarpperClass(Class warpperClass) {
-    this.warpperClass = warpperClass;
+  public Setting setWrapperClass(Class wrapperClass) {
+    this.wrapperClass = wrapperClass;
     return this;
   }
 

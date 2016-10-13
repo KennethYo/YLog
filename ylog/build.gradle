@@ -28,17 +28,17 @@ dependencies {
 
 ext.NAME = "YLog"
 ext.URL = "https://github.com/KennethYo/YLog"
-ext.DESCRIPTION = "an android log library"
+ext.DESCRIPTION = "android log library"
 
 ext.GROUP = "me.kennethyo.library"
 ext.ARTIFACT_ID = "ylog"
 
-ext.VERSION_NAME = "1.3"
-ext.VERSION_DESCRIPTION = "show process name"
+ext.VERSION_NAME = "1.4"
+ext.VERSION_DESCRIPTION = "1，warn 支持 throwable；\n2，异常回调只在 warn 和 erro；\n3，异常回调只要注册就会调用，debug方法无法关闭。"
 
 ext.SCM_URL = "https://github.com/KennethYo/YLog"
 ext.SCM_ISSUE_URL = "https://github.com/KennethYo/YLog/issues"
-ext.SCM_CONNECTION="https://github.com/KennethYo/YLog.git"
+ext.SCM_CONNECTION = "https://github.com/KennethYo/YLog.git"
 
 //apply from: "${project.rootDir}/gradle_mvn_push.gradle"
 apply from: "${project.rootDir}/gradle_bintray_push.gradle"

@@ -1,5 +1,6 @@
 package com.yiche.library.ylog;
 
+import android.text.TextUtils;
 import android.util.Log;
 import java.util.Arrays;
 
@@ -40,17 +41,19 @@ class Utils {
     if (args == null || args.length == 0) {
       return msg;
     }
+    if (TextUtils.isEmpty(msg)) {
+      return "msg is null";
+    }
     return String.format(msg, args);
   }
 
   static StackTraceElement[] getTargetStack(StackTraceElement[] elements, int offset,
-      Class... warppers) {
+      Class... wrappers) {
     int targetIndex = 0, length = elements.length;
     for (int i = 0; i < length; i++) {
-      for (Class w : warppers) {
+      for (Class w : wrappers) {
         String name = w.getName();
-        if (elements[i].getClassName().equals(name))
-          targetIndex = i;
+        if (elements[i].getClassName().equals(name)) targetIndex = i;
       }
     }
 

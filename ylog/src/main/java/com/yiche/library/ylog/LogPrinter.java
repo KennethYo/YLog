@@ -63,6 +63,14 @@ class LogPrinter implements Printer {
     l(getTag(), VERBOSE, null, msg, args);
   }
 
+  @Override public void d(Object o) {
+    l(getTag(), DEBUG, null, getString(o));
+  }
+
+  @Override public void d(String msg, Object... args) {
+    l(getTag(), DEBUG, null, msg, args);
+  }
+
   @Override public void i(Object o) {
     l(getTag(), INFO, null, getString(o));
   }
@@ -79,12 +87,16 @@ class LogPrinter implements Printer {
     l(getTag(), WARN, null, msg, args);
   }
 
-  @Override public void d(Object o) {
-    l(getTag(), DEBUG, null, getString(o));
+  @Override public void w(Throwable t) {
+    l(getTag(), WARN, t, null);
   }
 
-  @Override public void d(String msg, Object... args) {
-    l(getTag(), DEBUG, null, msg, args);
+  @Override public void w(Throwable t, Object o) {
+    l(getTag(), WARN, t, getString(o));
+  }
+
+  @Override public void w(Throwable t, String msg, Object... args) {
+    l(getTag(), ERROR, t, msg, args);
   }
 
   @Override public void e(Object o) {
@@ -153,24 +165,22 @@ class LogPrinter implements Printer {
 
   @Override public synchronized void l(String tag, @Priority int priority, Throwable t, String msg,
       Object... args) {
-    if (!setting.isDebug()) {
-      return;
-    }
     String message = formatMessage(msg, args);
     l(tag, priority, t, message);
   }
 
   @Override
   public synchronized void l(String tag, @Priority int priority, Throwable t, String msg) {
+    if (setting.getErrorListener() != null && t != null) {
+      setting.getErrorListener().onThrowable(priority, t);
+    }
+
     if (!setting.isDebug()) {
       return;
     }
+
     if (priority > setting.getShowPriority()) {
       return;
-    }
-
-    if (setting.getErrorListener() != null && t != null) {
-      setting.getErrorListener().onError(t);
     }
 
     androidLog(tag, priority, TOP_BORDER);
@@ -199,7 +209,7 @@ class LogPrinter implements Printer {
     }
   }
 
-  private void logStackTrace(String tag, @Priority int priority) {
+  private void logStackTrace(String tag, int priority) {
     if (!setting.isShowStackTrace()) {
       return;
     }
@@ -208,9 +218,9 @@ class LogPrinter implements Printer {
 
     StackTraceElement[] stacks;
 
-    if (setting.getWarpperClass() != null) {
+    if (setting.getWrapperClass() != null) {
       stacks = getTargetStack(stackTrace, setting.getShowClassCount(), YLog.class, LogPrinter.class,
-          setting.getWarpperClass());
+          setting.getWrapperClass());
     } else {
       stacks =
           getTargetStack(stackTrace, setting.getShowClassCount(), YLog.class, LogPrinter.class);
@@ -235,7 +245,7 @@ class LogPrinter implements Printer {
     androidLog(tag, priority, MIDDLE_BORDER);
   }
 
-  private void logProcessAndThread(String tag, @Priority int priority) {
+  private void logProcessAndThread(String tag, int priority) {
     if (!TextUtils.isEmpty(setting.getProcessName())) {
       androidLog(tag, priority, HORIZONTAL_DOUBLE_LINE + " Process : " + setting.getProcessName());
     }
@@ -258,7 +268,7 @@ class LogPrinter implements Printer {
     return tag;
   }
 
-  private void androidLog(String tag, @Priority int priority, String msg) {
+  private void androidLog(String tag, int priority, String msg) {
     switch (priority) {
       case VERBOSE:
         Log.v(tag, msg);

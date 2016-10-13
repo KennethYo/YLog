@@ -6,5 +6,5 @@ package com.yiche.library.ylog;
 
 public interface ErrorListener {
 
-  void onError(Throwable t);
+  void onThrowable(int priority, Throwable t);
 }

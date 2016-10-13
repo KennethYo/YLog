@@ -58,6 +58,18 @@ public class YLog {
     printer.w(msg, args);
   }
 
+  public static void w(Throwable t) {
+    printer.w(t);
+  }
+
+  public static void w(Throwable t, Object o) {
+    printer.w(t, o);
+  }
+
+  public static void w(Throwable t, String string, Object... args) {
+    printer.w(t, string, args);
+  }
+
   public static void e(Object o) {
     printer.e(o);
   }

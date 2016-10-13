@@ -24,9 +24,9 @@ public class MyApplication extends Application {
         .showStackTrace(true)//显示调用栈
         .setShowClassCount(2)//显示调用栈行数
         .showPriority(Printer.ERROR)//显示 log 级别
-        .setWarpperClass(MainActivity.WarpperLog.class)//包裹类
+        .setWrapperClass(MainActivity.WarpperLog.class)//包裹类
         .setErrorListener(new ErrorListener() {
-          @Override public void onError(Throwable t) {//throwable 回调
+          @Override public void onThrowable(int priority, Throwable t) {
             new Handler(Looper.getMainLooper()).post(new Runnable() {
               @Override public void run() {
                 Toast.makeText(MyApplication.this, "Oops, error", Toast.LENGTH_SHORT).show();
