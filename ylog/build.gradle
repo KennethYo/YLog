@@ -33,8 +33,8 @@ ext.DESCRIPTION = "android log library"
 ext.GROUP = "me.kennethyo.library"
 ext.ARTIFACT_ID = "ylog"
 
-ext.VERSION_NAME = "1.4"
-ext.VERSION_DESCRIPTION = "1，warn 支持 throwable；\n2，异常回调只在 warn 和 erro；\n3，异常回调只要注册就会调用，debug方法无法关闭。"
+ext.VERSION_NAME = "1.5"
+ext.VERSION_DESCRIPTION = "customer printer"
 
 ext.SCM_URL = "https://github.com/KennethYo/YLog"
 ext.SCM_ISSUE_URL = "https://github.com/KennethYo/YLog/issues"

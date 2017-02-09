@@ -22,6 +22,11 @@ public class YLog {
     return printer.init(tag);
   }
 
+  public static Printer setPrinter(Printer newPrinter) {
+    printer = newPrinter;
+    return printer;
+  }
+
   public static Printer t(String tag) {
     return printer.t(tag);
   }
