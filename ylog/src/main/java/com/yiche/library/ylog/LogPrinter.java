@@ -183,14 +183,18 @@ class LogPrinter implements Printer {
       return;
     }
 
-    androidLog(tag, priority, TOP_BORDER);
-    logProcessAndThread(tag, priority);
-    logStackTrace(tag, priority);
-    logContent(tag, priority, t, msg);
-    androidLog(tag, priority, BOTTOM_BORDER);
+    StringBuilder sb = new StringBuilder();
+
+    sb.append(TOP_BORDER).append("\n");
+    logProcessAndThread(sb);
+    logStackTrace(sb);
+    logContent(sb, t, msg);
+    sb.append(BOTTOM_BORDER);
+
+    androidLog(tag, priority, sb.toString());
   }
 
-  private void logContent(String tag, int priority, Throwable t, String msg) {
+  private void logContent(StringBuilder sb, Throwable t, String msg) {
     if (TextUtils.isEmpty(msg)) {
       msg = t == null ? "content is null" : Log.getStackTraceString(t);
     } else {
@@ -203,13 +207,13 @@ class LogPrinter implements Printer {
       do {
         int end = Math.min(newline, i + MAX_LOG_LENGTH);
         String part = msg.substring(i, end);
-        androidLog(tag, priority, HORIZONTAL_DOUBLE_LINE + " " + part);
+        sb.append(HORIZONTAL_DOUBLE_LINE + " ").append(part).append("\n");
         i = end;
       } while (i < newline);
     }
   }
 
-  private void logStackTrace(String tag, int priority) {
+  private void logStackTrace(StringBuilder sb) {
     if (!setting.isShowStackTrace()) {
       return;
     }
@@ -226,35 +230,37 @@ class LogPrinter implements Printer {
           getTargetStack(stackTrace, setting.getShowClassCount(), YLog.class, LogPrinter.class);
     }
 
-    for (int i = 0, size = stacks.length; i < size; i++) {
-      StackTraceElement stack = stacks[i];
+    for (StackTraceElement stack : stacks) {
       if (stack == null) continue;
-      StringBuilder sb = new StringBuilder();
-      sb.append("at ");
-      sb.append(stack.getClassName());
-      sb.append(".");
-      sb.append(stack.getMethodName());
-      sb.append(" ");
-      sb.append("(");
-      sb.append(stack.getFileName());
-      sb.append(":");
-      sb.append(stack.getLineNumber());
-      sb.append(")");
-      androidLog(tag, priority, HORIZONTAL_DOUBLE_LINE + " " + sb.toString());
+      String stackString = "at "
+          + stack.getClassName()
+          + "."
+          + stack.getMethodName()
+          + " "
+          + "("
+          + stack.getFileName()
+          + ":"
+          + stack.getLineNumber()
+          + ")";
+
+      sb.append(HORIZONTAL_DOUBLE_LINE + " ").append(stackString).append("\n");
     }
-    androidLog(tag, priority, MIDDLE_BORDER);
+    sb.append(MIDDLE_BORDER).append("\n");
   }
 
-  private void logProcessAndThread(String tag, int priority) {
+  private void logProcessAndThread(StringBuilder sb) {
     if (!TextUtils.isEmpty(setting.getProcessName())) {
-      androidLog(tag, priority, HORIZONTAL_DOUBLE_LINE + " Process : " + setting.getProcessName());
+      sb.append(HORIZONTAL_DOUBLE_LINE + " Process : ")
+          .append(setting.getProcessName())
+          .append("\n");
     }
     if (setting.isShowThreadName()) {
-      androidLog(tag, priority,
-          HORIZONTAL_DOUBLE_LINE + " Thread  : " + Thread.currentThread().getName());
+      sb.append(HORIZONTAL_DOUBLE_LINE + " Thread  : ")
+          .append(Thread.currentThread().getName())
+          .append("\n");
     }
     if (!TextUtils.isEmpty(setting.getProcessName()) || setting.isShowThreadName()) {
-      androidLog(tag, priority, MIDDLE_BORDER);
+      sb.append(MIDDLE_BORDER).append("\n");
     }
   }
 
